@@ -11,21 +11,45 @@
 <body>
 
 <!-- NAV -->
-<nav>
-  <span class="nav-logo">Rossina</span>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#vibe">Experience</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#locations">Locations</a></li>
-    <li><a href="https://www.instagram.com/rossinacafe/" target="_blank">Instagram ↗</a></li>
-  </ul>
+<nav id="site-header">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand" aria-label="Rossina Cafe home">
+      <span class="nav-brand-mark">
+        <img src="assets/img/rossinalogo.png" alt="Rossina logo">
+      </span>
+      <span class="nav-brand-text">
+        <span class="nav-brand-name">Rossina</span>
+        <span class="nav-brand-sub">Cafe · McAllen, TX</span>
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#vibe">Experience</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="https://www.instagram.com/rossinacafe/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    </ul>
+
+    <a href="#locations" class="nav-cta">Visit Us</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav-menu">☰</button>
+  </div>
+
+  <div class="mobile-nav-menu" id="mobile-nav-menu" hidden>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#vibe">Experience</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#locations">Locations</a>
+    <a href="https://www.instagram.com/rossinacafe/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <img class="hero-bg-img" src="assets/img/herobg.webp" alt="Rossina Cafe interior">
+  <img class="hero-bg-img" src="assets/img/rossinabg.png" alt="Rossina Cafe interior">
   <div class="hero-overlay"></div>
   <div class="hero-bg-pattern"></div>
   <div class="hero-texture"></div>
@@ -71,8 +95,16 @@
       </div>
     </div>
     <div class="about-image-stack">
-      <div class="about-img-main img-placeholder img-placeholder-main"><span class="about-main-icon">☕</span></div>
-      <div class="about-img-accent img-placeholder img-placeholder-accent">Interior · Ambiance</div>
+      <div class="about-img-main">
+        <img src="assets/img/rossinabg.png" alt="Rossina Cafe interior" loading="lazy">
+        <div class="about-logo-badge">
+          <img src="assets/img/rossinalogo.png" alt="Rossina logo" loading="lazy">
+        </div>
+        <div class="about-years-badge">
+          <span class="about-years-value">5+</span>
+          <span class="about-years-label">Years Serving</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -81,111 +113,35 @@
 <section id="menu" class="menu-section">
   <div class="menu-inner">
     <div class="menu-header">
-      <div>
-        <p class="section-label">What We Serve</p>
-        <h2 class="section-title">A menu worth <em>obsessing over</em></h2>
-        <div class="divider"></div>
-      </div>
+      <p class="menu-kicker">What We Serve</p>
+      <h2 class="menu-title">Our Featured Menu</h2>
+      <div class="menu-divider"></div>
     </div>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <div class="menu-card-photo">
-          <!-- Replace with: <img src="your-photo.jpg" alt="Strawberry Matcha"> -->
-          <div class="menu-card-photo-placeholder">
-            <span>🍵</span>
-            <small>Add photo here</small>
-          </div>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-title">Strawberry Matcha</div>
-          <div class="menu-card-desc">Our most talked-about drink — layered with fresh strawberry, premium matcha, and a cloud of foam. One of the best matcha drinks in the Valley.</div>
-          <div class="menu-card-price">Signature Drink</div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-photo">
-          <!-- Replace with: <img src="your-photo.jpg" alt="The Blondie"> -->
-          <div class="menu-card-photo-placeholder">
-            <span>☕</span>
-            <small>Add photo here</small>
-          </div>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-title">The Blondie</div>
-          <div class="menu-card-desc">A perfectly balanced iced coffee with warm vanilla notes and just the right amount of sweetness. A fan-favorite that keeps people coming back.</div>
-          <div class="menu-card-price">Iced Coffee</div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-photo">
-          <!-- Replace with: <img src="your-photo.jpg" alt="Fresh-Baked Pastries"> -->
-          <div class="menu-card-photo-placeholder">
-            <span>🥐</span>
-            <small>Add photo here</small>
-          </div>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-title">Fresh-Baked Pastries</div>
-          <div class="menu-card-desc">Carrot cake muffins, chocolate chip cookies, and daily specials — made in-house and served warm on request.</div>
-          <div class="menu-card-price">Baked Goods</div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-photo">
-          <!-- Replace with: <img src="your-photo.jpg" alt="Picnic Sandwich"> -->
-          <div class="menu-card-photo-placeholder">
-            <span>🥪</span>
-            <small>Add photo here</small>
-          </div>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-title">Picnic Sandwich</div>
-          <div class="menu-card-desc">Hearty, fresh, and beautifully assembled. Pairs perfectly with your afternoon coffee or a slow morning.</div>
-          <div class="menu-card-price">Food Menu</div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-photo">
-          <!-- Replace with: <img src="your-photo.jpg" alt="Chicken Salad Bowl"> -->
-          <div class="menu-card-photo-placeholder">
-            <span>🥗</span>
-            <small>Add photo here</small>
-          </div>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-title">Chicken Salad Bowl</div>
-          <div class="menu-card-desc">Light, seasonal, and surprisingly satisfying. Served with house crackers and dressed just right.</div>
-          <div class="menu-card-price">Food Menu</div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-photo">
-          <!-- Replace with: <img src="your-photo.jpg" alt="Specialty Lattes"> -->
-          <div class="menu-card-photo-placeholder">
-            <span>🫖</span>
-            <small>Add photo here</small>
-          </div>
-        </div>
-        <div class="menu-card-body">
-          <div class="menu-card-title">Specialty Lattes</div>
-          <div class="menu-card-desc">From classic vanilla to unique seasonal creations — crafted with care and served in our signature style.</div>
-          <div class="menu-card-price">Coffee & Drinks</div>
-        </div>
-      </div>
-    </div>
+    <div class="menu-filter-tabs" id="menu-filter-tabs"></div>
+    <div class="menu-card-grid" id="menu-card-grid"></div>
   </div>
+  <template id="menu-card-template">
+    <article class="menu-card">
+      <div class="menu-card-image-wrap">
+        <img class="menu-card-image" alt="">
+        <span class="menu-card-badge"></span>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-top">
+          <h3 class="menu-card-title"></h3>
+          <span class="menu-card-price"></span>
+        </div>
+        <p class="menu-card-desc"></p>
+      </div>
+    </article>
+  </template>
 </section>
 
 <!-- VIBE / EXPERIENCE -->
 <section id="vibe" class="vibe-section-wrap">
   <div class="vibe-section">
     <p class="section-label">The Experience</p>
-    <h2 class="section-title">More than coffee — <em>a whole vibe</em></h2>
+    <h2 class="section-title">More than coffee — <em>where details matter</em></h2>
     <div class="divider"></div>
     <div class="vibe-grid">
       <div class="vibe-features">
@@ -226,6 +182,7 @@
         </div>
       </div>
       <div class="vibe-img">
+        <img src="assets/img/rossinadetail.png" alt="Rossina pastry display" loading="lazy">
         <span class="vibe-img-label">Uncommonly Rossina</span>
       </div>
     </div>
@@ -447,6 +404,159 @@
 </footer>
 
 <script>
+  // Featured menu filtering
+  const menuItems = [
+    {
+      id: 1,
+      name: 'Strawberry Matcha',
+      price: '$6.75',
+      category: 'Matcha',
+      description: 'Layered with fresh strawberry, ceremonial matcha, and a silky cold foam.',
+      img: 'assets/img/rossinabg.png'
+    },
+    {
+      id: 2,
+      name: 'The Blondie',
+      price: '$5.95',
+      category: 'Coffee',
+      description: 'Smooth iced coffee with warm vanilla notes and balanced sweetness.',
+      img: 'assets/img/herobg.webp'
+    },
+    {
+      id: 3,
+      name: 'Carrot Cake Muffin',
+      price: '$4.25',
+      category: 'Bakery',
+      description: 'Fresh-baked in house, lightly spiced, and best served warm.',
+      img: 'assets/img/rossinabg.png'
+    },
+    {
+      id: 4,
+      name: 'Picnic Sandwich',
+      price: '$8.95',
+      category: 'Food',
+      description: 'A hearty layered sandwich made to pair with your afternoon coffee.',
+      img: 'assets/img/herobg.webp'
+    },
+    {
+      id: 5,
+      name: 'Chicken Salad Bowl',
+      price: '$9.50',
+      category: 'Food',
+      description: 'Light, crisp, and satisfying with house dressing and crackers.',
+      img: 'assets/img/rossinabg.png'
+    },
+    {
+      id: 6,
+      name: 'Vanilla Latte',
+      price: '$5.50',
+      category: 'Coffee',
+      description: 'Espresso and steamed milk with sweet vanilla and a velvety finish.',
+      img: 'assets/img/herobg.webp'
+    }
+  ];
+
+  const menuCategories = ['All', ...new Set(menuItems.map(item => item.category))];
+  let activeMenuFilter = 'All';
+
+  const menuFilterTabs = document.getElementById('menu-filter-tabs');
+  const menuCardGrid = document.getElementById('menu-card-grid');
+  const menuCardTemplate = document.getElementById('menu-card-template');
+
+  function renderMenuTabs() {
+    menuFilterTabs.innerHTML = '';
+
+    menuCategories.forEach(category => {
+      const button = document.createElement('button');
+      button.className = 'menu-filter-btn';
+      button.type = 'button';
+      button.textContent = category;
+
+      if (category === activeMenuFilter) {
+        button.classList.add('active');
+      }
+
+      button.addEventListener('click', () => {
+        activeMenuFilter = category;
+        renderMenuTabs();
+        renderMenuCards();
+      });
+
+      menuFilterTabs.appendChild(button);
+    });
+  }
+
+  function renderMenuCards() {
+    const filteredItems = activeMenuFilter === 'All'
+      ? menuItems
+      : menuItems.filter(item => item.category === activeMenuFilter);
+
+    menuCardGrid.innerHTML = '';
+
+    filteredItems.forEach(item => {
+      const fragment = menuCardTemplate.content.cloneNode(true);
+      const image = fragment.querySelector('.menu-card-image');
+      const badge = fragment.querySelector('.menu-card-badge');
+      const title = fragment.querySelector('.menu-card-title');
+      const price = fragment.querySelector('.menu-card-price');
+      const description = fragment.querySelector('.menu-card-desc');
+
+      image.src = item.img;
+      image.alt = item.name;
+      badge.textContent = item.category;
+      title.textContent = item.name;
+      price.textContent = item.price;
+      description.textContent = item.description;
+
+      menuCardGrid.appendChild(fragment);
+    });
+  }
+
+  renderMenuTabs();
+  renderMenuCards();
+
+  // Header scroll state + mobile menu
+  const siteHeader = document.getElementById('site-header');
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileNavMenu = document.getElementById('mobile-nav-menu');
+
+  function updateHeaderState() {
+    if (window.scrollY > 12) {
+      siteHeader.classList.add('scrolled');
+    } else {
+      siteHeader.classList.remove('scrolled');
+    }
+  }
+
+  function closeMobileMenu() {
+    mobileNavMenu.classList.remove('open');
+    mobileNavMenu.hidden = true;
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.textContent = '☰';
+  }
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileNavMenu.classList.toggle('open');
+    mobileNavMenu.hidden = !isOpen;
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  mobileNavMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      closeMobileMenu();
+    }
+  });
+
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+  updateHeaderState();
+
   // Location card interactivity
   document.querySelectorAll('.location-card').forEach(card => {
     card.addEventListener('click', function() {
