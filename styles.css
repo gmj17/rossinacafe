@@ -716,9 +716,67 @@
     margin: 0;
   }
 
+  .rq-strip {
+    background: #C4956A;
+    overflow: hidden;
+    padding: 14px 0;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .rq-strip + .rs-wrap {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .rq-inner {
+    display: inline-flex;
+    align-items: center;
+    animation: rq-scroll 28s linear infinite;
+  }
+
+  .rq-strip:hover .rq-inner {
+    animation-play-state: paused;
+  }
+
+  .rq-item {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #2e1f0e;
+    padding: 0 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .rq-item em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: #1e1208;
+  }
+
+  .rq-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(46,31,14,0.35);
+    flex-shrink: 0;
+  }
+
+  @keyframes rq-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
   /* ── EXPERIENCE ── */
   .rs-wrap {
-    padding: 0 34px;
+    padding: 0;
     background: var(--cream);
     border-radius: 16px 16px 0 0;
   }
@@ -730,8 +788,9 @@
     min-height: 432px;
     position: relative;
     overflow: hidden;
-    max-width: 1240px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 
   .rs-img {
@@ -1326,7 +1385,7 @@
     }
     .menu-card-grid { grid-template-columns: 1fr; }
     .reviews-grid { grid-template-columns: 1fr; }
-    .rs-wrap { padding: 0 16px; }
+    .rs-wrap { padding: 0; }
     .rs {
       grid-template-columns: 1fr;
       min-height: 0;
